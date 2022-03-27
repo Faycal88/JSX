@@ -1,53 +1,30 @@
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "./style.css";
+import React from "react";
+import imageInSrc from "./imageInSrc.jpg";
+import video1 from "./videos/myVideo.mp4";
 
 function App() {
+  const mystyle = {
+    border: "solid 1px black",
+    maxWidth: "100vw",
+  };
   return (
-    <div className="app">
-      <form action="">
-        <div className="mb-3">
-          <label for="exampleInputEmail1" className="form-label">
-            Email address
-          </label>
-          <input
-            type="email"
-            className="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-          />
-          <div id="emailHelp" className="form-text">
-            We'll never share your email with anyone else.
-          </div>
-        </div>
-        <div className="mb-3">
-          <label for="exampleInputPassword1" className="form-label">
-            Password
-          </label>
-          <input
-            type="password"
-            className="form-control"
-            id="exampleInputPassword1"
-          />
-        </div>
-        <div className="mb-3 form-check">
-          <input
-            type="checkbox"
-            className="form-check-input"
-            id="exampleCheck1"
-          />
-          <label className="form-check-label" for="exampleCheck1">
-            keep me logged in
-          </label>
-        </div>
-        <div>
-          <button type="submit" className="btn btn-warning m-2">
-            Login
-          </button>
-          <button type="submit" className="btn btn-warning">
-            Go back
-          </button>
-        </div>
-      </form>
+    <div>
+      <div style={mystyle}>
+        <h1 className="title red">Faycal</h1>
+        <br />
+        <img src={imageInSrc} alt="lorem picsum" />
+        <br />
+        <img src="/imageInPublic.jpg" alt="lorem picsum" />
+      </div>
+      <video
+        src={video1}
+        width="320"
+        height="240"
+        controls="controls"
+        autoplay="true"
+      />
     </div>
   );
 }
